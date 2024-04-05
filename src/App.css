@@ -1,38 +1,78 @@
-.App {
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 180%;
+  color: #666;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  background-color: #666;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar.black {
+  background: rgba(0, 0, 0, 0.8);
+  height: 80px;
+  width: 140px;
+  padding: 10px 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar .logo {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.navbar .logo img {
+  display: block;
+  width: 100%;
+  transition: 0.5s;
+}
+.navbar.black .logo {
+  margin-top: 0%;
+}
+.navbar.black .logo img {
+  height: 60px;
+}
+.navbar ul {
+  float: right;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.navbar ul li {
+  list-style: none;
+  margin-top: 25px;
+  line-height: none;
+  font-size: 18px;
   color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1s;
+  text-shadow: 0 0 10px #000;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar.black ul li {
+  color: #fff;
+  line-height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar ul li.active,
+.navbar ul li:hover {
+  color: orange;
+  cursor: pointer;
 }
