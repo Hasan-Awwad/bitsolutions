@@ -1,0 +1,48 @@
+.ticker {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  background: radial-gradient(ellipse 50% 50% at center, rgba(255, 165, 0,0.75), transparent);
+}
+.ticker__list {
+  display: flex;
+  animation: ticker 15s infinite linear;
+}
+.ticker:hover .ticker__list {
+  animation-play-state: paused;
+}
+.ticker__item {
+  margin-right: 20px;
+}
+.ticker__image-container {
+  width: 265px;
+  height: 180px;
+  overflow: hidden; /* Ensure the image does not overflow its container */
+}
+.ticker__image-container img {
+  width: 100%; /* Ensure the image fills its container */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+@-moz-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}

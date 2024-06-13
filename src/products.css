@@ -1,0 +1,20 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Gap between grid items */
+  margin: 3%;
+}
+
+.product-item {
+  display: flex; /* Make each item a flex container */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text */
+  padding: 1%;
+  /* Add other styling for each product item */
+}
+
+.product-data{
+    display: flex;
+    flex-direction: column;
+}
